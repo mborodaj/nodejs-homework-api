@@ -3,14 +3,8 @@ const mongoose = require('mongoose');
 const { Subscription } = require('../helpers/constants');
 
 const passwordRegExp = '^[-\\.\\$\\#\\w]*$';
-const nameRegExp = '^[-\\s\\.A-Za-z]*$';
 
 const schemaUser = Joi.object({
-
-    name: Joi.string()
-        .pattern(new RegExp(nameRegExp))
-        .min(1)
-        .max(30),
 
     email: Joi.string()
         .email({ minDomainSegments: 1, tlds: { allow: true } })

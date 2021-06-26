@@ -1,9 +1,15 @@
 const Users = require('../repositories/users');
 const jwt = require('jsonwebtoken');
+const fs = require('fs/promises');
+const path = require('path');
+
 require('dotenv').config();
+const UploadAvatarService = require('../services/local-upload');
 
 const { HttpCode } = require('../helpers/constants');
 const SECRET_KEY = process.env.SECRET_KEY;
+
+const AVATAR_OF_USERS = path.join('public', process.env.AVATAR_OF_USERS)
 
 const register = async (req, res, next) => {
     try {
@@ -18,12 +24,12 @@ const register = async (req, res, next) => {
             });
         };
 
-        const { name, email, subscription } = await Users.create(req.body);
+        const { email, subscription, avatarURL } = await Users.create(req.body);
 
         return res.status(HttpCode.CREATED).json({
             status: 'success',
             code: HttpCode.CREATED,
-            data: { name, email, subscription }
+            data: { email, subscription, avatarURL }
         });
 
     } catch (e) {
@@ -44,12 +50,16 @@ const login = async (req, res, next) => {
             });
         };
 
-        const { id, name, email, subscription } = user;
+        const { id, email, subscription, avatarURL } = user;
         const payload = { id };
         const token = jwt.sign(payload, SECRET_KEY, { expiresIn: '2h' });
 
         await Users.updateToken(id, token);
-        return res.json({ status: 'success', code: HttpCode.OK, data: { token, user: { name, email, subscription } } });
+        return res.status(HttpCode.OK).json({
+            status: 'success',
+            code: HttpCode.OK,
+            data: { token, user: { email, subscription, avatarURL } }
+        });
     } catch (e) {
         next(e);
     };
@@ -67,12 +77,12 @@ const current = async (req, res, next) => {
             });
         };
 
-        const { email, subscription } = user;
+        const { email, subscription, avatarURL } = user;
 
         return res.status(HttpCode.OK).json({
             status: 'success',
             code: HttpCode.OK,
-            data: { email, subscription }
+            data: { email, subscription, avatarURL }
         });
     } catch (e) {
         next(e);
@@ -135,4 +145,44 @@ const logout = async (req, res, next) => {
     };
 };
 
-module.exports = { register, login, logout, current, updateSubscription };
+const avatars = async (req, res, next) => {
+
+    try {
+        if (!req.user?.token) {
+            return res.status(HttpCode.UNAUTHORIZED).json({
+                status: 'error',
+                code: HttpCode.UNAUTHORIZED,
+                message: 'Not authorized',
+            });
+        };
+
+        const id = req.user.id;
+        const uploads = new UploadAvatarService(AVATAR_OF_USERS);
+        const avatarURL = await uploads.saveAvatar({ idUser: id, file: req.file });
+
+        try {
+            await fs.unlink(path.join(AVATAR_OF_USERS, req.user.avatarURL));
+        } catch (e) {
+            console.log(e.message);
+        };
+
+        await Users.updateAvatar(id, avatarURL);
+        res.status(HttpCode.OK).json({
+            status: 'success',
+            code: HttpCode.OK,
+            data: { avatarURL }
+        });
+    } catch (error) {
+        next(error);
+    };
+
+};
+
+module.exports = {
+    register,
+    login,
+    logout,
+    current,
+    updateSubscription,
+    avatars
+};

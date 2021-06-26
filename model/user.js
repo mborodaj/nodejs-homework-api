@@ -1,13 +1,14 @@
 const { Schema, model } = require('mongoose');
+const gr = require('gravatar');
 const bcrypt = require('bcryptjs');
 const { Subscription } = require('../helpers/constants');
+
 
 
 // create helpers folder and carry off: SALT_WORK_FACTOR;subscriptionType =["starter", "pro", "business"]
 const SALT_WORK_FACTOR = 9;
 
 const userSchema = new Schema({
-  name: { type: String, minLength: 2, default: "Guest"},
   password: {
     type: String,
     required: [true, 'Password is required'],
@@ -29,6 +30,12 @@ const userSchema = new Schema({
   token: {
     type: String,
     default: null,
+  },
+  avatarURL: {
+    type: String,
+    default: function () {
+      return gr.url(this.email, { s: '250' }, true);
+    }
   },
 });
 
