@@ -7,7 +7,6 @@ const path = require('path');
 const Users = require('../repositories/users');
 const Services = require('../services/local-upload');
 
-
 require('dotenv').config();
 
 const app = require('../app');
@@ -54,7 +53,7 @@ describe('Test route user avatars', () => {
     });
 
     test('Upload user avatar fail token', async () => {
-        const fakeToken = 'fggghhhggggghhjkk';
+        const fakeToken = 'fgjhdgjfghkghlhjkkhdfsghfdgs.sdfgdfsgsfd.sfghfgh';
         fs.unlink.mockReturnValue(Promise.resolve(path.join('tmp', file)));
         const buf = await fs.readFile.mockReturnValue(Promise.resolve(('./test/data/avatar.jpg')));
         const response = await supertest(app)

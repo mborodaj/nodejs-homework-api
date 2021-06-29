@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1624656247625" clover="3.2.0">
-  <project timestamp="1624656247626" name="All files">
+<coverage generated="1624274181284" clover="3.2.0">
+  <project timestamp="1624274181284" name="All files">
     <metrics statements="387" coveredstatements="225" conditionals="66" coveredconditionals="16" methods="65" coveredmethods="19" elements="518" coveredelements="260" complexity="0" loc="387" ncloc="387" packages="10" files="19" classes="19"/>
-    <package name="nodejs-homework-api">
+    <package name="nodejs-homework-rest-api">
       <metrics statements="31" coveredstatements="27" conditionals="8" coveredconditionals="2" methods="3" coveredmethods="0"/>
-      <file name="app.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/app.js">
+      <file name="app.js" path="D:\.workspace\nodejs-homework-rest-api\app.js">
         <metrics statements="31" coveredstatements="27" conditionals="8" coveredconditionals="2" methods="3" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -39,9 +39,9 @@
         <line num="46" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.config">
+    <package name="nodejs-homework-rest-api.config">
       <metrics statements="17" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="passport.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/config/passport.js">
+      <file name="passport.js" path="D:\.workspace\nodejs-homework-rest-api\config\passport.js">
         <metrics statements="17" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -62,9 +62,9 @@
         <line num="23" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.controllers">
+    <package name="nodejs-homework-rest-api.controllers">
       <metrics statements="124" coveredstatements="34" conditionals="28" coveredconditionals="1" methods="12" coveredmethods="1"/>
-      <file name="contacts.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/controllers/contacts.js">
+      <file name="contacts.js" path="D:\.workspace\nodejs-homework-rest-api\controllers\contacts.js">
         <metrics statements="51" coveredstatements="9" conditionals="12" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -118,7 +118,7 @@
         <line num="80" count="0" type="stmt"/>
         <line num="84" count="1" type="stmt"/>
       </file>
-      <file name="users.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/controllers/users.js">
+      <file name="users.js" path="D:\.workspace\nodejs-homework-rest-api\controllers\users.js">
         <metrics statements="73" coveredstatements="25" conditionals="16" coveredconditionals="1" methods="6" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -195,9 +195,9 @@
         <line num="181" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.helpers">
+    <package name="nodejs-homework-rest-api.helpers">
       <metrics statements="43" coveredstatements="38" conditionals="11" coveredconditionals="8" methods="10" coveredmethods="8"/>
-      <file name="constants.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/helpers/constants.js">
+      <file name="constants.js" path="D:\.workspace\nodejs-homework-rest-api\helpers\constants.js">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -205,7 +205,7 @@
         <line num="24" count="0" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
       </file>
-      <file name="create-folder.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/helpers/create-folder.js">
+      <file name="create-folder.js" path="D:\.workspace\nodejs-homework-rest-api\helpers\create-folder.js">
         <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -215,7 +215,7 @@
         <line num="12" count="0" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
-      <file name="guard.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/helpers/guard.js">
+      <file name="guard.js" path="D:\.workspace\nodejs-homework-rest-api\helpers\guard.js">
         <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -232,7 +232,7 @@
         <line num="23" count="2" type="stmt"/>
         <line num="27" count="2" type="stmt"/>
       </file>
-      <file name="upload.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/helpers/upload.js">
+      <file name="upload.js" path="D:\.workspace\nodejs-homework-rest-api\helpers\upload.js">
         <metrics statements="17" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -253,9 +253,9 @@
         <line num="34" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.model">
+    <package name="nodejs-homework-rest-api.model">
       <metrics statements="50" coveredstatements="33" conditionals="6" coveredconditionals="3" methods="12" coveredmethods="3"/>
-      <file name="contact.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/model/contact.js">
+      <file name="contact.js" path="D:\.workspace\nodejs-homework-rest-api\model\contact.js">
         <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -271,7 +271,7 @@
         <line num="53" count="1" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
       </file>
-      <file name="db.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/model/db.js">
+      <file name="db.js" path="D:\.workspace\nodejs-homework-rest-api\model\db.js">
         <metrics statements="19" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -293,7 +293,7 @@
         <line num="36" count="0" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
       </file>
-      <file name="user.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/model/user.js">
+      <file name="user.js" path="D:\.workspace\nodejs-homework-rest-api\model\user.js">
         <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -315,9 +315,9 @@
         <line num="56" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.repositories">
+    <package name="nodejs-homework-rest-api.repositories">
       <metrics statements="42" coveredstatements="20" conditionals="5" coveredconditionals="0" methods="13" coveredmethods="3"/>
-      <file name="contacts.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/repositories/contacts.js">
+      <file name="contacts.js" path="D:\.workspace\nodejs-homework-rest-api\repositories\contacts.js">
         <metrics statements="25" coveredstatements="8" conditionals="5" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -345,7 +345,7 @@
         <line num="66" count="0" type="stmt"/>
         <line num="69" count="1" type="stmt"/>
       </file>
-      <file name="users.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/repositories/users.js">
+      <file name="users.js" path="D:\.workspace\nodejs-homework-rest-api\repositories\users.js">
         <metrics statements="17" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -366,9 +366,9 @@
         <line num="32" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.routes.api">
+    <package name="nodejs-homework-rest-api.routes.api">
       <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="contacts.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/routes/api/contacts.js">
+      <file name="contacts.js" path="D:\.workspace\nodejs-homework-rest-api\routes\api\contacts.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -383,7 +383,7 @@
         <line num="23" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
       </file>
-      <file name="users.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/routes/api/users.js">
+      <file name="users.js" path="D:\.workspace\nodejs-homework-rest-api\routes\api\users.js">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -400,9 +400,9 @@
         <line num="17" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.services">
+    <package name="nodejs-homework-rest-api.services">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="local-upload.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/services/local-upload.js">
+      <file name="local-upload.js" path="D:\.workspace\nodejs-homework-rest-api\services\local-upload.js">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -419,17 +419,17 @@
         <line num="29" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.test.data">
+    <package name="nodejs-homework-rest-api.test.data">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="data.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/test/data/data.js">
+      <file name="data.js" path="D:\.workspace\nodejs-homework-rest-api\test\data\data.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="nodejs-homework-api.validation">
+    <package name="nodejs-homework-rest-api.validation">
       <metrics statements="40" coveredstatements="19" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="contactsValidation.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/validation/contactsValidation.js">
+      <file name="contactsValidation.js" path="D:\.workspace\nodejs-homework-rest-api\validation\contactsValidation.js">
         <metrics statements="21" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -453,7 +453,7 @@
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
       </file>
-      <file name="userValidation.js" path="/Users/mikhail/Desktop/GoIT/nodejs-homework-api/validation/userValidation.js">
+      <file name="userValidation.js" path="D:\.workspace\nodejs-homework-rest-api\validation\userValidation.js">
         <metrics statements="19" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
